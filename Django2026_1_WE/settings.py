@@ -134,3 +134,8 @@ MEDIA_URL = '/media/'
 
 # Path where media is stored
 MEDIA_ROOT = BASE_DIR / 'media'
+   # Ajustes propios del servidor (no se suben a GitHub)
+   try:
+       from .settings_local import *
+   except ImportError:
+       pass
